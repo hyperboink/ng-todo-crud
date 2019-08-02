@@ -1,0 +1,62 @@
+.con{
+    flex: 1;
+    margin: 0 0 30px 0;
+
+    .con-label{
+        margin: 0 0 12px 0;
+    }
+    
+    form{
+        display: flex;
+        input{
+            flex: 9;
+            height: 30px;
+            padding: 0 10px;
+            outline: none;
+        }
+        button{
+            flex: 1;
+            background: #4f8690;
+            color: #fff;
+            border: 0;
+            cursor: pointer;
+            &[disabled]{
+                opacity: .5;
+            }
+        }
+    }
+    ul{
+        padding: 0;
+        list-style-position: inside;
+        li{
+            border-bottom: solid #555 1px;
+            padding: 5px 0;
+            .con-item{
+                display: inline-block;
+                width: 83%;
+                word-break: break-word;
+                vertical-align: top;
+            }
+            .con-item-right{
+                float: right;
+                .remove{
+                    cursor: pointer;
+                    color: red;
+                }
+                .edit{
+                    cursor: pointer;
+                    color: #458690;
+                }
+                .separator{
+                    margin: 0 10px;
+                }
+                &:after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+            }
+            
+        }
+    }
+}

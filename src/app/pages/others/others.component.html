@@ -1,0 +1,14 @@
+<div class="container con-todo">
+    <div class="con-label">Items {{todoCount | count}}</div>
+
+    <ul *ngIf="todos.length; else noTodoItems">
+        <li *ngFor="let todo of todos; let i = index">
+            <span class="con-item">{{todo}}</span>
+        </li>
+    </ul>
+    
+    <ng-template #noTodoItems>
+        <p>No items.</p>
+    </ng-template>
+</div>
+    

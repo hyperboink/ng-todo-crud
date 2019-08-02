@@ -1,0 +1,48 @@
+.modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    &.close{
+        display: none;
+    }
+    .modal-inner{
+        background: #fff;
+        width: 480px;
+        margin: 40px auto 40px auto;
+        position: relative;
+        text-align: center;
+        .close-modal{
+            position: absolute;
+            top: 3px;
+            right: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        form{
+            padding: 20px 20px;
+            input{
+                width: 100%;
+                height: 35px;
+                box-sizing: border-box;
+                padding: 0 10px;
+            }
+            button{
+                height: 38px;
+                width: 100%;
+                margin: 9px 0 0 0;
+                background: #4f8690;
+                color: #fff;
+                border: 0;
+                cursor: pointer;
+                &[disabled]{
+                    opacity: .5;
+                }
+            }
+        }
+        
+    }
+}

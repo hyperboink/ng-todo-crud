@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    font-family: Segoe UI, sans-serif;
+    font-size: 14px;
+    color: #555;
+}
+
+.container{
+    width: 767px;
+    //border: solid green 1px;
+    margin: 0 auto;
+}

@@ -1,0 +1,35 @@
+<div class="container con-todo">
+    <div class="con">
+        <div class="con-label">Add the things you want to do.</div>
+        <form>
+            <input name="todo" type="text" [(ngModel)]="todo" placeholder="type here...">
+            <button (click)="addTodo(todo)" [disabled]="!todo">Add</button>
+        </form>
+        
+        
+    </div>
+    <div class="con">
+
+        <div class="con-label">Items {{todoCount | count}}</div>
+
+        <ul *ngIf="todos.length; else noTodoItems">
+            <li *ngFor="let todo of todos; let i = index">
+                <span class="con-item">{{updatedIndex === i ? updatedTodoVal : todo}}</span>
+                <div class="con-item-right">
+                    <span class="edit" (click)="editTodo(todo, i)">Edit</span>
+                    <span class="separator">|</span>
+                    <span class="remove" (click)="removeTodo(i)">Delete</span>
+                </div>
+                
+            </li>
+        </ul>
+        
+        <ng-template #noTodoItems>
+            <p>No items.</p>
+        </ng-template>
+      
+    </div>
+
+    <modal-edit [edit]="modalData" (updateValues)="update($event)"></modal-edit>
+
+</div>

@@ -1,0 +1,10 @@
+<div class="modal" [ngClass]="edit.isOpen ? 'open': 'close'" (click)="close()">
+    <div class="modal-inner">
+        <span class="close-modal">X</span>
+        <form (click)="$event.stopPropagation()">
+            <p>Please update your todo item in the field input.</p>
+            <input type="text" name="updateTodo" [(ngModel)]="edit.value">
+            <button (click)="update()" [disabled]="!edit.value">Update</button>
+        </form>     
+    </div>
+</div>
